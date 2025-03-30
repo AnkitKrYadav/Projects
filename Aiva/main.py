@@ -42,7 +42,7 @@ def askai(q):
         return response.text.replace('*','')
 
     except Exception as e:
-        print('1: '+str(e))#edit 1
+        print('1api: '+str(e))#edit 1
         try:
             client = genai.Client(api_key=api_key2)
             api_key,api_key2=api_key2,api_key
@@ -56,7 +56,7 @@ def askai(q):
             )
             return response.text.replace('*','')
         except Exception as f:
-            print('2: '+str(f))
+            print('2api: '+str(f))
 
 def speak(txt):
     '''convert text to speech'''
