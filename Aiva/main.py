@@ -9,8 +9,6 @@ from google.genai.types import Tool,GoogleSearch
 
 # Global variables
 name=''
-prompt=(f'You are Aiva,a reliable AI assistant known for providing concise,to-the-point answers in respect to user name {name} '
-       'from india, in max 120 words.Your tone is friendly, and always approachable.')
 api_key= os.getenv("GEMINI_API_KEY")
 api_key2= os.getenv("GEMINI_API_KEY2")
 client = genai.Client(api_key=api_key)
@@ -27,7 +25,7 @@ engine.setProperty('voice', voices[0].id)
 #Functions:
 def askai(q):
     '''Provide output of query through G-api'''
-    global client,api_key,api_key2,name
+    global client,api_key,api_key2
 
     try:
         response = client.models.generate_content(
@@ -42,7 +40,7 @@ def askai(q):
         return response.text.replace('*','')
 
     except Exception as e:
-        print('1api: '+str(e))#edit 1
+        print('1: '+str(e))#edit 1
         try:
             client = genai.Client(api_key=api_key2)
             api_key,api_key2=api_key2,api_key
@@ -56,7 +54,7 @@ def askai(q):
             )
             return response.text.replace('*','')
         except Exception as f:
-            print('2api: '+str(f))
+            print('2: '+str(f))
 
 def speak(txt):
     '''convert text to speech'''
@@ -93,6 +91,8 @@ def intro():
 # Program starts here
 print('\n------------------------------------------------------------------------------------------------------------------')
 intro()
+prompt=('You are Aiva,a reliable indian AI assistant known for providing concise,to-the-point answers in english alphabets only. '
+       f'in max 120 words.Your tone is friendly, and always approachable.Your user is \"{name}\" from india')
 
 while True:
     order=tc().lower()
@@ -133,7 +133,7 @@ while True:
         else:
             print(order)
 
-    elif ('exit'==order):
+    elif ('exit'==order or 'aiva exit'==order):
         speak(f"Have a great day ahead, good bye {name}.")
         sys.exit()
 
