@@ -1,0 +1,255 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#gamecontainer {
+  margin: 0%;
+  padding: 0%;
+  background-image: url("bg.png");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
+}
+
+#cool {
+  position: absolute;
+  top: 7vh;
+  right: 15.7vw;
+  background-size: cover;
+  width: 11vw;
+  height: 10vh;
+  color: red;
+  font-weight: bold;
+  padding-left: 1vw;
+  font-size: 2vw;
+  visibility: hidden;
+
+}
+
+#intro {
+  width: 77vw;
+  height: 34vh;
+  position: absolute;
+  left: 10.6vw;
+}
+
+#intro1 {
+  font-size: 5.77vw;
+  position: relative;
+  left: 0vw;
+  top: 4.5vh;
+  color: mintcream;
+  background-color: dodgerblue;
+  border-radius: 4vw;
+  padding-left: 1.3vw;
+  padding-right: 0vw;
+  border: 0.12vw solid #243c33;
+}
+
+#intro2 {
+  font-size: 4.9vw;
+  position: relative;
+  left: 19.5vw;
+  top: 4.2vh;
+  color: oldlace;
+  border: 3.9px solid black;
+  background: dodgerblue;
+  border-bottom-left-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+  padding: 0.3vw;
+  padding-right: 0.57vw;
+  width: 37vw;
+  padding-left: 0.73vw;
+  border-top-width: 3.5px;
+  border-top-color: turquoise;
+}
+
+#score {
+  font-size: 2.5vw;
+  border: 0.06vw solid black;
+  border-radius: 0.41vw;
+  background-color: mediumspringgreen;
+  margin: 4vh 3.2vw;
+  padding-left: 0.6vw;
+  padding-right: 0.8vw;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  display: inline;
+  position: absolute;
+  top: 0vh;
+  visibility: hidden;
+  z-index: 1;
+}
+
+#hiscore {
+  position: absolute;
+  font-size: 2.5vw;
+  border: 0.06vw solid black;
+  border-radius: 0.41vw;
+  background-color: mediumspringgreen;
+  margin: 4vh 3.2vw;
+  padding-left: 0.39vw;
+  padding-right: 0.3vw;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  display: inline;
+  top: 0vh;
+  left: 20vw;
+  visibility: hidden;
+  z-index: 1;
+}
+
+#gameover {
+
+  color: black;
+  position: absolute;
+  top: 6.5vh;
+  left: 12.6vw;
+  border: 0.5vw solid red;
+  padding-left: 12vw;
+  padding-top: 4.5vh;
+  background-color: powderblue;
+  visibility: hidden;
+  height: 72vh;
+  width: 62vw;
+}
+
+#gotext1 {
+
+  position: relative;
+  font-size: 9.6vw;
+
+}
+
+#gotext2 {
+  font-size: 4.74vw;
+  color: black;
+  position: relative;
+  top: 1.5vh;
+  left: 4.5vw;
+  visibility: hidden;
+}
+
+#Dino {
+  position: absolute;
+  bottom: 0vh;
+  left: 0vw;
+  background-image: url("dino.png");
+  background-repeat: no-repeat;
+  background-size: 23vw 27.1vh;
+  width: 23.2vw;
+  height: 25vh;
+}
+
+#obstacle {
+  position: absolute;
+  bottom: 0vh;
+  right: 0vw;
+  background-image: url("dragon.png");
+  background-size: 12.2vw 21.2vh;
+  background-repeat: no-repeat;
+  width: 12vw;
+  height: 19.7vh;
+}
+
+#cpxi {
+  position: absolute;
+  top: 0vh;
+  left: 2.5vw;
+}
+
+#cpxe {
+  position: absolute;
+  left: 31vw;
+  top: 0vh;
+}
+
+#sur {
+  position: absolute;
+  left: 10vw;
+  top: 0vh;
+
+}
+
+#hmm {
+  position: absolute;
+  left: 4.46vw;
+}
+
+.obsani {
+  animation: obsani 3.5s linear infinite;
+}
+
+.dinoani {
+  animation: dinoani 1s linear infinite;
+}
+
+.dinorani {
+  animation: dinorani 0.3s linear 1;
+}
+
+@keyframes dinorani {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(4.46vw);
+  }
+}
+
+@keyframes obsani {
+  0% {
+    right: -14vw;
+
+  }
+
+  100% {
+    right: 110vw;
+  }
+}
+
+@keyframes dinoani {
+  0% {
+    bottom: 0vh;
+  }
+
+  50% {
+    bottom: 50vh;
+  }
+
+  100% {
+
+    bottom: 0vh;
+
+  }
+}
+
+
+/* cpxi
+ 
+  width: 50vw;
+  height: 50vh;
+  visibility: visible;
+  background-color: aqua;
+  top: 25vh;
+  left: 25vw;
+  z-index: 2;
+
+}
+#test {
+  width: 10vw;
+  height: 10vh;
+  visibility: visible;
+  background-color: blue;
+  position: relative;
+  top: 100;
+  left: 0%;
+
+}*/
